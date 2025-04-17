@@ -36,3 +36,33 @@ A modular Go application that allows users to upload and process PDF files, trac
 - `middleware.ExtractUserID()` is used to identify the current user from token
 
 ```
+
+## Configure Environment Variables
+
+Create a .env file and configure: (follow env.example strongly)
+
+
+## Installation 
+(follow go.mod strongly)
+
+
+## Run Project
+```
+# run project
+make run
+
+# DB migration
+make migration
+```
+
+## API Endpoints
+```
+* /api/login
+
+* /api/file/list
+* /api/file/upload
+* /api/file/processed
+
+* /api/chat/list
+* /api/chat/ask-question
+```
