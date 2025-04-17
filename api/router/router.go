@@ -19,4 +19,8 @@ func AppRoute(app *fiber.App) {
 	file.Get("/list", handler.ListFiles)
 	file.Post("/upload", handler.UploadFile)
 	file.Post("/processed", handler.ProcessFile)
+
+	chat := app.Group("/api/chat", middleware.JWTAuthentication)
+	chat.Get("/list", handler.GetChats)
+	chat.Post("/ask-question", handler.AskQuestion)
 }

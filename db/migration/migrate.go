@@ -10,8 +10,9 @@ func main() {
 	config.LoadEnv()
 	config.ConnectDB()
 
-	// config.DB.AutoMigrate(&model.User{})
-	config.DB.AutoMigrate(&model.User{}, &model.File{})
+	config.DB.AutoMigrate(&model.User{})
+	config.DB.AutoMigrate(&model.File{})
+	config.DB.AutoMigrate(&model.Chat{})
 
 	fmt.Println("Migration completed")
 }
